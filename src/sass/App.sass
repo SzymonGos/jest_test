@@ -1,0 +1,48 @@
+@import '_button'
+
+.App 
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+
+.main
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    background-color: #fff
+    min-height: 30vh
+    width: 100%
+    margin: 0 1rem
+    padding: 0 1rem
+    border-radius: 5px
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px
+
+    .header
+        margin: 2rem 0 1rem
+        text-align: center
+        line-height: 2rem
+    
+    .btn-container
+        margin-bottom: 2rem
+        align-self: center
+        
+        .btn
+            border: none
+            padding: .5rem 1rem
+            font-size: 1.1rem
+            font-weight: bold
+            letter-spacing: 1px
+            border-radius: 5px
+            background-color: #7bba81
+            color: #fff
+            cursor: pointer
+            outline: none
+            &:hover
+                background-color: #4d8e54
+                transition: background-color .5s ease-out
+                
+
+@media screen and ( min-width: 480px )
+    .main
+        width: 40vw
