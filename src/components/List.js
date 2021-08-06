@@ -25,28 +25,36 @@ const List = () => {
     const inputEl = useRef(null);
 
     const addNote = () => {
-        if (inputEl.current.value === '') return;
+        if (inputEl.current.value.trim() === '') return;
         dispatch({
             type: "ADD",
             name: inputEl.current.value
         })
         inputEl.current.value = '';
     }
-    console.log(notes);
+
+    console.log(notes.length);
+    
     return (
         <>
             <header className="header">
                 <input
                     className='input'
                     ref={inputEl}
-                    placeholder='Add note' />
+                    placeholder='New note'
+                    data-testid="input-field" />
                 <button
                     type='button'
                     className='btn'
                     onClick={addNote}
+                    data-testid="add-button"
                 >
                     Add note</button>
                 <div className='notes'>
+                <h4 
+                style={{textTransform:'lowercase'}}
+                data-testid="countNotes"
+                >{notes.length} note(s)</h4>
                     {notes.map((note) => (
                         <div
                             key={note.id}
