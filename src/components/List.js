@@ -32,8 +32,6 @@ const List = () => {
         })
         inputEl.current.value = '';
     }
-
-    console.log(notes.length);
     
     return (
         <>
@@ -59,11 +57,13 @@ const List = () => {
                         <div
                             key={note.id}
                             className='notes__item'
+                            data-testid='note'
                         >
                             <p>{note.name}</p>
                             <AiFillCloseCircle 
                             className='btn-close'
                             onClick={()=> dispatch({ type: 'REMOVE', id: note.id})}
+                            data-testid='delete-button'
                             />
                         </div>
 
