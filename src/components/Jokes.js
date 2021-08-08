@@ -25,15 +25,17 @@ const Jokes = () => {
     fetchRandomJoke();
   }, [])
 
+  // console.log(randomJoke);
+
   if (error) {
     return <header className='header'>
-      <h4>Network Error</h4>
+      <h4 data-testid='fetch-error'>Network Error</h4>
     </header>
   }
 
   if (isLoading) {
     return <header className='header'>
-      <h4>Loading...</h4>
+      <h4 data-testid='fetch-loading'>Loading...</h4>
     </header>
   }
 
@@ -43,8 +45,10 @@ const Jokes = () => {
         <div>
           <img
             src={randomJoke.icon_url}
-            alt="chuck head" />
-          <p>"{randomJoke.value}"</p>
+            alt="chuck head" 
+            data-testid='fetch-img'  
+            />
+          <p data-testid='fetch-joke'>"{randomJoke.value}"</p>
         </div>
       </header>
       <div className="btn-container">
@@ -52,6 +56,7 @@ const Jokes = () => {
           type='button'
           className='btn'
           onClick={fetchRandomJoke}
+          data-testid='fetch-btn'
         >
           Refresh
         </button>

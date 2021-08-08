@@ -83,7 +83,7 @@ describe('<List />', () => {
         const addButton = screen.getByTestId('add-button');
         const notesCounter = screen.getByTestId('countNotes');
 
-        // Add the new empty note
+        // Ateempt to add an empty note
         fireEvent.change(input, { target: { value: '' } });
         fireEvent.click(addButton);
 
