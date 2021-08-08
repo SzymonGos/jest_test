@@ -25,8 +25,6 @@ const Jokes = () => {
     fetchRandomJoke();
   }, [])
 
-  // console.log(randomJoke);
-
   if (error) {
     return <header className='header'>
       <h4 data-testid='fetch-error'>Network Error</h4>
