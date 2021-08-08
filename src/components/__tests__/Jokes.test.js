@@ -19,8 +19,7 @@ describe("<Jokes /> ", () => {
             }));
 
         await act(async () => render(<Jokes />));
-        const fetchBtn = screen.getByText("Refresh");
-
+        
         // Generate initial random joke
         expect(screen.getByTestId("fetch-joke").textContent).toBe('\"joke test\"');
 
