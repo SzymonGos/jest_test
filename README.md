@@ -16,11 +16,14 @@ The results can be summed up that no matter how small the test is, I need to mak
     <img src='src/images/jokes.png' width='500'>
 </p>
 
+[Link to Jokes test](https://github.com/SzymonGos/jest_test/blob/main/src/components/__tests__/Jokes.test.js)
 
 `<List />` test screenshot
 <p align='center'>
     <img src='src/images/list.png' width='500'>
 </p>
+
+[Link to List test file](https://github.com/SzymonGos/jest_test/blob/main/src/components/__tests__/List.test.js)
 
 ## Getting Started with Create React App
 
