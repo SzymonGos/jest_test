@@ -4,18 +4,23 @@ The purpose of this app is to use JavaScript Testing Framework `Jest`. The purpo
 
 ## What I learnt
 
-Software testing is important because if there are any bugs or errors in the software, they can be identified early and fixed before the software product is delivered. Before reading Jest's documentation, I was asking myself: *what exactly should I test?* To answer this question, I found many types of software tests that can be found [here](https://www.softwaretestinghelp.com/types-of-software-testing/). <br /> 
+Software testing is important because if there are any bugs or errors in the software, they can be identified early and fixed before the software product is delivered. Before reading Jest's documentation, I was asking myself: *what exactly should I test?* To answer this question, I found many types of software tests that can be found [here](https://www.softwaretestinghelp.com/types-of-software-testing/). <br /><br />
 For this project, I decide to use a mix of end-to-end tests with unit testing. For the first test, I wanted to know how end users would interact with the application (`<List />`) and if the output met the application logic. <br /> 
-The second test I conducted t was to mock an API (`<Jokes />`). I have mixed feelings regarding mocking fetch, as I found articles/comments that mocking of API is overused or necessary. <br />
+The second test I conducted t was to mock an API (`<Jokes />`). I have mixed feelings regarding mocking fetch, as I found articles/comments that mocking of API is overused or necessary. However, for the learning purpose, I have successfully tested mock fetch. <br />
 The results can be summed up that no matter how small the test is, I need to make sure the components are rendering.
 
 ## Results
 
 `<Jokes />` test screenshot
-![](src/images/jokes.png)
+<p align='center'>
+    <img src='src/images/jokes.png' width='500'>
+</p>
+
 
 `<List />` test screenshot
-![](src/images/list.png)
+<p align='center'>
+    <img src='src/images/list.png' width='500'>
+</p>
 
 ## Getting Started with Create React App
 
