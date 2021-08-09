@@ -33,4 +33,16 @@ describe("<Jokes /> ", () => {
 
         global.fetch.mockClear();
     });
+
+    it("display 'Loading...' while clikcing the button", async () => {
+        await act(async () => render(<Jokes />));
+
+        // Check if button is in the body of the document
+        const button = screen.getByTestId('fetch-btn');
+        expect(button).toBeInTheDocument();
+
+        // Simulate button click to check if 'Loading...' appear in the document
+        fireEvent.click(button);
+        expect(screen.getByTestId('fetch-loading').textContent).toBe("Loading...");
+    })
 });
